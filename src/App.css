@@ -1,0 +1,22 @@
+.App{
+    background-color:pink;
+    color: aliceblue;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+.page1{
+    background-image: url(dogcare.png);
+    background-size: 1100px 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+.blur-background{
+    filter:blur(2px);
+}

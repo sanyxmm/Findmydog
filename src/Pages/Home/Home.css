@@ -1,0 +1,21 @@
+.HomePage{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.Search input{
+    font-size: 15px;
+    padding: 8px;
+    width: 30vw;
+    border-radius:7px;
+}
+.Search button{
+    font-size: 21px;
+    opacity: 75%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+ 
+}
