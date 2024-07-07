@@ -4,6 +4,8 @@ margin: 0;
 box-sizing: border-box;
 }
 .navbar{
+position: fixed;
+width: 100vw;
 display: flex;
 flex-direction: row;
 justify-content: space-between;

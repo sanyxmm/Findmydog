@@ -32,7 +32,7 @@ function App() {
       <div >
          <div className='page1'>
          <Navbar onButtonClick={openMenu} Menu={Menu} />
-         <Home Menu={Menu}/>
+         <Home Menu={Menu} />
          </div>
       </div>
     }
