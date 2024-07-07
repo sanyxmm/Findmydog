@@ -4,9 +4,10 @@
     position: absolute;
     top: 15%;
     right: 8%;
-   height:80vh ;
+   height:70vh ;
+   max-height: 400px;
    width: 25vw;
-   padding:50px 20px 50px 20px;
+   padding:30px 20px 30px 20px;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
