@@ -11,7 +11,7 @@ flex-direction: row;
 justify-content: space-between;
 align-items: center;
 font-size: 15px;
-padding: 30px;
+padding: 25px 80px 25px 80px;
 }
 .navbar button{
     padding: 5px 13px 5px 13px;

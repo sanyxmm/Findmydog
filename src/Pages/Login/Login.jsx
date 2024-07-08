@@ -33,16 +33,22 @@ const Login = ({ onButtonClick, register }) => {
         <div>
           <h1>Login</h1>
           <a style={{ cursor: 'pointer' }} onClick={onButtonClick}>
-            New User? Sign up
+          New User? Sign up
           </a>
         </div>
 
         <form onSubmit={handleSignIn}>
-          <label>Email address: <br /><input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required /></label>
-          <label>Password: <br /><input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required /></label>
+
+          <div>Email address: <br />
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+          </div>
+          <div>Password: <br />
+          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+          </div>  
+
           {error && <p style={{ color: 'red' }}>{error}</p>}
           <button type="submit" style={{ padding: '10px' }}>Sign in</button>
-        </form>
+        </form>      
       </div>
       {register && <Reg />}
     </div>

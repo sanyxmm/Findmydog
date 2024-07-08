@@ -131,7 +131,8 @@ const Reg = () => {
                     </div>
 
                     <label htmlFor="checkbox" id="check">
-                        <input id="checkbox" type="checkbox" required style={{ width: '15px', height: '15px' }} /> I agree to all terms & conditions
+                        <input id="checkbox" type="checkbox" required style={{ width: '15px', height: '15px' }} />
+                        I agree to all terms & conditions
                     </label>
 
                     <input type="submit" value="Submit" id="SubmitBtn" />
