@@ -10,6 +10,8 @@ input{
     height: 100vh;
     width: 100vw;
     position: absolute;
+    top: 0%;
+    left: 0%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,14 +63,6 @@ input{
 
 #category label{
     margin-right: 10px;
-}
-
-#details input{
-    /* padding-left: 30px; */
-}
-#details i{
-    position: absolute;
-    margin: 7px 5px;
 }
 
 #password-field{

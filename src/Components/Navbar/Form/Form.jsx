@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './Form.css'
 // import { signup } from '../../api';  //Imports the Signup function from 'api.js' file
-
-const  Form = () => {
+import OutsideClickHandler from 'react-outside-click-handler';
+const  Form = ({closeOwner}) => {
     const [userData, setUserData] = useState({
         firstName: '',
         lastName: '',
@@ -28,7 +28,11 @@ const  Form = () => {
 
     return (
         <div className='User'>
-        <form className="User-box" onSubmit={handleSubmit}>
+      <OutsideClickHandler
+      onOutsideClick={()=>{
+        closeOwner();
+      }}>
+      <form className="User-box" onSubmit={handleSubmit}>
             <h1 style={{ fontSize: '30px', textAlign: 'center' }}>Owner Details</h1>
         
             <div className="User-image">
@@ -94,6 +98,7 @@ const  Form = () => {
         
             <input type="submit" value="Submit" id="SubmitBtn" />
         </form>
+      </OutsideClickHandler>
         </div> 
     );
 };

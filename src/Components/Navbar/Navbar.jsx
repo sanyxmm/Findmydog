@@ -4,7 +4,10 @@ import Form from './Form/Form'
 const Navbar = ({onButtonClick,Menu,register}) => {
     const [isFormOpen, setIsFormOpen] = useState(false);
   
-    const toggleForm = () => {
+    const openOwner = () => {
+      setIsFormOpen(!isFormOpen);
+    };
+    const closeOwner = () => {
       setIsFormOpen(!isFormOpen);
     };
   return (
@@ -14,11 +17,11 @@ const Navbar = ({onButtonClick,Menu,register}) => {
         <a href="/">Home</a>
         <a href="/">Search</a>
         <a href="/">Help</a>
-        <a href="#" onClick={toggleForm}>Owner</a>
+        <a href="#" onClick={openOwner}>Owner</a>
         <a href="/">About us</a>
       </div>
       <div><button onClick={onButtonClick}>Sign in</button></div>
-      {isFormOpen && <Form/>}
+      {isFormOpen && <Form closeOwner={closeOwner} />}
     </div>
   )
 }

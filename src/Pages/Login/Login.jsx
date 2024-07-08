@@ -1,9 +1,10 @@
 // src/pages/Login.jsx
-import React, { useState } from 'react';
+import React, { useState,useRef } from 'react';
 import './Login.css';
 import { auth } from '../../firebase'; 
+import OutsideClickHandler from 'react-outside-click-handler';
 
-const Login = ({ onButtonClick, register }) => {
+const Login = ({ onButtonClick, register,closeMenu }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -27,7 +28,11 @@ const Login = ({ onButtonClick, register }) => {
   };
 
   return (
-    <div className='loginBox'>
+    <OutsideClickHandler onOutsideClick={() => {
+      // Close the menu
+      closeMenu();
+    }}>
+      <div className='loginBox'>
       <div className='login'>
        
         <form onSubmit={handleSignIn}>
@@ -51,6 +56,7 @@ const Login = ({ onButtonClick, register }) => {
       </div>
       
     </div>
+    </OutsideClickHandler>
   );
 };
 

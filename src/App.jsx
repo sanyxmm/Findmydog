@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar/Navbar'
 import './App.css'
 
 function App() {
+  
   //popup menu
   const [Menu,setMenu] = useState(false);
   const openMenu = ()=> {
@@ -18,12 +19,13 @@ function App() {
   const openRegister = ()=>{
     setregister(true);
   }
+  const closeRegister = ()=>{
+    setregister(false);
+  }
   useEffect(() => {
       closeMenu();
   }, [register]);
-  const closeregister = ()=>{
-    setregister(false);
-  }
+ 
 
   //loading animation
   // const [anima,setanima] = useState(true);
@@ -44,7 +46,7 @@ function App() {
       <div >
          <div className='page1'>
          <Navbar onButtonClick={openMenu} Menu={Menu} register={register} />
-         <Home Menu={Menu} register={register} closeMenu={closeMenu} openRegister={openRegister} />
+         <Home Menu={Menu} register={register} closeMenu={closeMenu} openRegister={openRegister} closeRegister ={closeRegister} />
          </div>
       </div>
     }
