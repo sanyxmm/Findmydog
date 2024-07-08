@@ -14,10 +14,10 @@ font-size: 15px;
 padding: 25px 80px 25px 80px;
 }
 .navbar button{
-    padding: 5px 13px 5px 13px;
+    padding: 7px 15px 7px 15px;
     font-size: 15px;
     background-color: rgb(46, 44, 44);
-    border-radius: 15px;
+    border-radius: 5px;
     color: white;
 }
 .navbtns{
@@ -28,6 +28,6 @@ padding: 25px 80px 25px 80px;
 }
 .navbtns a{
     text-decoration: none;
-    color: white;
+    color: rgb(23, 22, 22);
     font-weight: 500;
 }

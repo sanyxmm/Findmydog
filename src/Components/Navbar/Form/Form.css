@@ -2,19 +2,25 @@ input{
     padding: 5px;
     padding-right: 40px;
     font-size:10px;
-  
 }
+
 .User{
+    backdrop-filter: blur(4px);
+    background-color: transparent;
+    height: 100vh;
+    width: 100vw;
     position: absolute;
-    top: 90%;
-    left: 32%;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .User-box{
     color: black;
     position: relative;
-    height: 80vh;
+    height: 90vh;
     width: 38vw;
-    background-color: white;
     padding: 15px 20px;
     display: flex;
     flex-direction: column;

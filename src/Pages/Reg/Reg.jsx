@@ -46,9 +46,9 @@ const Reg = () => {
 
     return (
         <div className='regg'>
-            <div>
+            
                 <form className="box2" onSubmit={handleSubmit}>
-                    <h1 style={{ fontSize: '30px', textAlign: 'center' }}>Registration Form</h1>
+                    <h1 style={{ fontSize: '30px', textAlign: 'center' }}>Sign-Up</h1>
 
                     <div className="image">
                         <img src="profile.jpg" alt="" id="profile-pic" />
@@ -138,7 +138,6 @@ const Reg = () => {
                     <input type="submit" value="Submit" id="SubmitBtn" />
                 </form>
                 {error && <p style={{ color: 'red' }}>{error}</p>}
-            </div>
         </div>
     );
 };

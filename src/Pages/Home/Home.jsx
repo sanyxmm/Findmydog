@@ -1,22 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState ,  useEffect} from 'react'
 import Login from '../Login/Login'
-
+import Reg from '../Reg/Reg'
 import './Home.css'
-function Home({Menu}) {
-  const[register,setregister]=useState(false)
-  const openRegister = ()=>{
-    setregister(!register);
-  }
-  const closeregister = ()=>{
-    setregister(!register);
-  }
+function Home({Menu,register,closeMenu,openRegister}) {
   return (
     <div className='HomePage'>
-       <div className={`Search ${Menu ? 'blur-background' : ''}`} >
+       <div className={`Search ${Menu||register ? 'blur-background' : ''}`} >
            <label ><input type="text" placeholder='Search Pet-id ' /> </label>
            <button><i className="fa-solid fa-magnifying-glass"></i></button>
        </div>
-      {Menu && (<Login onButtonClick={openRegister} register={register}/>)}
+      {Menu && (<Login onButtonClick={openRegister}/>)}
+      {register && <Reg />}
     </div>
   );
 }

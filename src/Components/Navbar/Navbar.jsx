@@ -1,15 +1,15 @@
 import React ,{ useState}  from 'react'
 import './Navbar.css'
 import Form from './Form/Form'
-const Navbar = ({onButtonClick,Menu}) => {
+const Navbar = ({onButtonClick,Menu,register}) => {
     const [isFormOpen, setIsFormOpen] = useState(false);
   
     const toggleForm = () => {
       setIsFormOpen(!isFormOpen);
     };
   return (
-    <div className={`navbar ${Menu ? 'blur-background' : ''}`}>
-      <h1>FindMyDog</h1>
+    <div className={`navbar ${Menu || register ? 'blur-background' : ''}`}>
+      <h1>FindMyPet</h1>
       <div className='navbtns'>
         <a href="/">Home</a>
         <a href="/">Search</a>

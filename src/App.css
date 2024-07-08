@@ -1,6 +1,6 @@
 .App{
     background-color:pink;
-    color: aliceblue;
+    color: rgb(21, 22, 22);
     display:flex;
     align-items:center;
     justify-content:center;
@@ -10,8 +10,8 @@
 }
 
 .page1{
-    background-image: url(dogcare.png);
-    background-size: 1100px 700px;
+    background-image: url(pg1.jpeg);
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100vw;
