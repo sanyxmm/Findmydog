@@ -1,5 +1,6 @@
 import React ,{ useState}  from 'react'
 import './Navbar.css'
+import paw from './2.png'
 import Form from './Form/Form'
 const Navbar = ({onButtonClick,Menu,register}) => {
     const [isFormOpen, setIsFormOpen] = useState(false);
@@ -12,7 +13,7 @@ const Navbar = ({onButtonClick,Menu,register}) => {
     };
   return (
     <div className={`navbar ${Menu || register ? 'blur-background' : ''}`}>
-      <h1>FindMyPet</h1>
+      <img src={paw} width="180px" alt="" />
       <div className='navbtns'>
         <a href="/">Home</a>
         <a href="/">Search</a>

@@ -1,0 +1,6 @@
+.page3 img{
+    height: 125vh;
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: blue;
+}

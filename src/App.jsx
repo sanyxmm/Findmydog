@@ -1,12 +1,16 @@
 import React ,{ useState,useEffect } from 'react'
-// import DotLoader from "react-spinners/DotLoader"
 import Home from './Pages/Home/Home'
 import Navbar from './Components/Navbar/Navbar'
 import './App.css'
+import d3 from './dg3.gif'
+import Page3 from './Pages/Page3/Page3';
+import Page6 from './Pages/Page6/Page6';
+import Page7 from './Pages/Page7/Page7';
+
 
 function App() {
   
-  //popup menu
+  // popup menu
   const [Menu,setMenu] = useState(false);
   const openMenu = ()=> {
       setMenu(true)
@@ -27,29 +31,33 @@ function App() {
   }, [register]);
  
 
-  //loading animation
-  // const [anima,setanima] = useState(true);
-  // useEffect(() =>{
-  //     setanima(true)
-  //     setTimeout(() => {
-  //         setanima(false);
-  //     }, 3000);
-  //  },[]);
+  // loading animation
+  const [anima,setanima] = useState(true);
+  useEffect(() =>{
+      setanima(true)
+      setTimeout(() => {
+          setanima(false);
+      }, 3000);
+   },[]);
   
   return (
-    <div className="App">
+    <div>
+      <div className="App">
     { 
-    
-      // anima ?
-      // <DotLoader  color={'#ffffff'} anima={anima} size={50} className="loader"/>
-      // :
+      anima ?
+      <div id="snuf"><img  src={d3} width="300px" height="300px"></img></div>
+      :
       <div >
          <div className='page1'>
          <Navbar onButtonClick={openMenu} Menu={Menu} register={register} />
          <Home Menu={Menu} register={register} closeMenu={closeMenu} openRegister={openRegister} closeRegister ={closeRegister} />
          </div>
+         <Page3/>
+         <Page6/>
+         <Page7/>
       </div>
     }
+    </div>
     </div>
   );
   }
