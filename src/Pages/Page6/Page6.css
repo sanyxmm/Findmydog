@@ -8,3 +8,13 @@
     justify-content: space-between;
     background-color: #f3f3f3;
 }
+#contact{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+font-size: 3vw;
+}
+#contact div{
+    margin-left: 10vw;
+}

@@ -6,6 +6,7 @@ import d3 from './dg3.gif'
 import Page3 from './Pages/Page3/Page3';
 import Page6 from './Pages/Page6/Page6';
 import Page7 from './Pages/Page7/Page7';
+import Page4 from './Pages/Page4/Page4'
 
 
 function App() {
@@ -52,8 +53,10 @@ function App() {
          <Navbar onButtonClick={openMenu} Menu={Menu} register={register} />
          <Home Menu={Menu} register={register} closeMenu={closeMenu} openRegister={openRegister} closeRegister ={closeRegister} />
          </div>
+        
          <Page3/>
          <Page6/>
+         <Page4/>
          <Page7/>
       </div>
     }

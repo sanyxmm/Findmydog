@@ -1,4 +1,10 @@
 .page7 img{
     width: 100vw;
     height: 120vh;
+    filter: blur(3px);
+}
+.page7{
+    position: relative;
+    width: 100vw;
+    height: 130vh;
 }

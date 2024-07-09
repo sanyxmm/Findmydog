@@ -1,6 +1,10 @@
-.page3 img{
-    height: 125vh;
+
+.page3{
     width: 100vw;
-    overflow-x: hidden;
-    background-color: blue;
+    height: 60vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
 }
