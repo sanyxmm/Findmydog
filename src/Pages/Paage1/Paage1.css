@@ -1,0 +1,35 @@
+.paage1{
+    width: 100vw;
+    height: 70vh;
+    background-color:#8c654a;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    font-size: 1.7vw;
+    text-align: center;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.paage1 span{
+    font-size: 1.2vw;
+    margin: 0.4vw;
+    opacity: 80%;
+    margin: 1.5vw;
+}
+.paage1 input{
+    font-size: 16px;
+    margin-left: 5px;
+    padding: 10px;
+}
+.paage1 button{
+    padding: 9px;
+    font-size: 17px;
+    width:36vw;
+}
