@@ -1,30 +1,36 @@
-import React ,{ useState}  from 'react'
-import './Navbar.css'
+import React ,{ useState , useContext}  from 'react'
+import { AppContext } from '../../context'
+import Owner from '../../RegisterPet/Owner'
+import { Link } from 'react-scroll';
 import paw from './2.png'
-import Form from './Form/Form'
-const Navbar = ({onButtonClick,Menu,register}) => {
-    const [isFormOpen, setIsFormOpen] = useState(false);
-  
-    const openOwner = () => {
-      setIsFormOpen(!isFormOpen);
-    };
-    const closeOwner = () => {
-      setIsFormOpen(!isFormOpen);
-    };
+import './Navbar.css'
+
+const Navbar = () => {
+  const {register,Menu,openMenu,openOwner,isFormOpen} = useContext(AppContext);   
   return (
     <div className={`navbar ${Menu || register ? 'blur-background' : ''}`}>
       <img src={paw} width="180px" alt="" />
+
       <div className='navbtns'>
-        <a href="/">Home</a>
-        <a href="/">Search</a>
-        <a href="/">Help</a>
-        <a href="#" onClick={openOwner}>Owner</a>
-        <a href="/">About us</a>
+        <Link  activeClass="active" smooth spy to ="Home">Home</Link>
+        <Link  activeClass="active" smooth spy to="Search">Search</Link>
+        <Link  activeClass="active" smooth spy to="RegisterPet">RegisterPet</Link>
+        <Link  activeClass="active" smooth spy to="Help">Help</Link>
+        <Link  activeClass="active" smooth spy to="Aboutus">About us</Link>
       </div>
-      <div><button onClick={onButtonClick}>Sign in</button></div>
-      {isFormOpen && <Form closeOwner={closeOwner} />}
+
+
+      <div><button onClick={openMenu} >Sign in</button></div>
+      {isFormOpen && <Owner/>}
     </div>
   )
 }
-
 export default Navbar
+
+
+
+  {/* <a href="#Home">Home</a>
+        <a href="#Search">Search</a>
+        <a href="#RegisterPet">RegisterPet</a>
+        <a href="#Help">Help</a>
+        <a href="#Aboutus">About us</a> */}

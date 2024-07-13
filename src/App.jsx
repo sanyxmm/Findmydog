@@ -1,69 +1,55 @@
-import React ,{ useState,useEffect } from 'react'
-import Home from './Pages/Home/Home'
-import Navbar from './Components/Navbar/Navbar'
-import './App.css'
-import d3 from './dg3.gif'
+import React, { useState, useEffect, useContext } from "react";
+import { AppProvider } from "./context";
+import Navbar from './Components/Navbar/Navbar';
+import Home from './Pages/Home/Home';
 import Page3 from './Pages/Page3/Page3';
+import Page4 from './Pages/Page4/Page4';
+import Page5 from "./Pages/Page5/Page5";
 import Page6 from './Pages/Page6/Page6';
 import Page7 from './Pages/Page7/Page7';
-import Page4 from './Pages/Page4/Page4'
-import Paage1 from './Pages/Paage1/Paage1'
-
+import Footer from "./Components/Foot/Footer";
+import d3 from './dg3.gif';
+import './App.css';
 
 function App() {
-  
-  // popup menu
-  const [Menu,setMenu] = useState(false);
-  const openMenu = ()=> {
-      setMenu(true)
-  };
-  const closeMenu = ()=> {
-    setMenu(false);
-  };
-
-  const[register,setregister]=useState(false)
-  const openRegister = ()=>{
-    setregister(true);
-  }
-  const closeRegister = ()=>{
-    setregister(false);
-  }
-  useEffect(() => {
-      closeMenu();
-  }, [register]);
- 
-
   // loading animation
-  const [anima,setanima] = useState(true);
-  useEffect(() =>{
-      setanima(true)
-      setTimeout(() => {
-          setanima(false);
-      }, 3000);
-   },[]);
-  
+  const [anima, setanima] = useState(true);
+  useEffect(() => {
+    setanima(true)
+    setTimeout(() => {
+      setanima(false);
+    }, 1000);
+  }, []);
+
   return (
-    <div>
-      <div className="App">
-    { 
-      anima ?
-      <div id="snuf"><img  src={d3} width="300px" height="300px"></img></div>
-      :
-      <div >
-         <div className='page1'>
-         <Navbar onButtonClick={openMenu} Menu={Menu} register={register} />
-         <Home Menu={Menu} register={register} closeMenu={closeMenu} openRegister={openRegister} closeRegister ={closeRegister} />
-         </div>
-        
-         <Page3/>
-         <Page6/>
-         <Page4/>
-         <Page7/>
-         <Paage1/>
+      <AppProvider>
+      <div>
+        <div className="App">{anima ?
+          <div id="snuf"><img src={d3} width="300px" height="300px"></img></div>:
+             <div > 
+               <Navbar/>
+               <div id="Home"><Home/></div>
+               <div id="Search"><Page5/></div>
+               <div ><Page3/></div>
+               <div id="Help"><Page6/></div>
+               <div><Page4/></div>
+               <div id="RegisterPet"><Page7/></div>
+               <div id="Aboutus"><Footer/></div>
+            </div>}
+        </div>
       </div>
-    }
-    </div>
-    </div>
+      </AppProvider>
   );
-  }
+}
+
 export default App;
+
+
+  {/* <Navbar/> */}
+            {/* <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/Page3" element={<Page3 />} />
+                  <Route path="/Page6" element={<Page6 />} />
+                  <Route path="/Page4" element={<Page4 />} />
+                  <Route path="/Page7" element={<Page7 />} />
+            </Routes> */}

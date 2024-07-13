@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
-import './Form.css'
-// import { signup } from '../../api';  //Imports the Signup function from 'api.js' file
+import React, { useContext, useState } from 'react';
 import OutsideClickHandler from 'react-outside-click-handler';
-const  Form = ({closeOwner}) => {
+import { AppContext } from '../context';
+import './Owner.css'
+// import { signup } from '../../api';  //Imports the Signup function from 'api.js' file
+
+const  Owner = () => {
+    const {closeOwner} = useContext(AppContext);
     const [userData, setUserData] = useState({
         firstName: '',
         lastName: '',
@@ -29,11 +32,10 @@ const  Form = ({closeOwner}) => {
     return (
         <div className='User'>
       <OutsideClickHandler
-      onOutsideClick={()=>{
-        closeOwner();
-      }}>
+      onOutsideClick={()=>{ closeOwner();}}>
+
       <form className="User-box" onSubmit={handleSubmit}>
-            <h1 style={{ fontSize: '30px', textAlign: 'center' }}>Owner Details</h1>
+            <h1 style={{ fontSize: '30px', textAlign: 'center',color:'black'}}>Owner Details</h1>
         
             <div className="User-image">
                 <img src="profile.jpg" alt="" id="profile-pic" />
@@ -103,4 +105,4 @@ const  Form = ({closeOwner}) => {
     );
 };
 
-export default Form;
+export default Owner;

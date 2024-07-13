@@ -40,13 +40,13 @@ input{
     align-items: center;
     gap: 10px;
 }
-.image img{
+/* .image img{
     width: 7vw;
     height: 8vw;
     border-radius: 48%;
     object-fit: cover;
     background: #dfdfdf;
-}
+} */
 #to-upload{
     display: none;
 }

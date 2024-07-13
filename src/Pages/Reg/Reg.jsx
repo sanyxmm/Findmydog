@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './Reg.css';
 import { signup } from '../../api';  //Imports the Signup function from 'api.js' file
 import OutsideClickHandler from 'react-outside-click-handler';
-const Reg = ({closeRegister}) => {
+import { AppContext } from '../../context';
+const Reg = () => {
+    const{closeRegister,closeRegister2} = useContext(AppContext);
+
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -22,7 +25,6 @@ const Reg = ({closeRegister}) => {
             [e.target.name]: e.target.value,
         });
     };
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         
@@ -49,17 +51,17 @@ const Reg = ({closeRegister}) => {
         <OutsideClickHandler onOutsideClick={() => {
             // Close the menu
             closeRegister();
-          }}>
-          
+            closeRegister2();
+          }}> 
             
           <form className="box2" onSubmit={handleSubmit}>
               <h1 style={{ fontSize: '30px', textAlign: 'center' }}>Sign-Up</h1>
 
-              <div className="image">
+              {/* <div className="image">
                   <img src="profile.jpg" alt="" id="profile-pic" />
                   <input type="file" accept="image/jpg ,image/jpeg" id="to-upload" />
                   <label htmlFor="to-upload" id="profile">Upload Image</label>
-              </div>
+              </div> */}
 
               <label>
                   First Name: <br />
@@ -142,8 +144,8 @@ const Reg = ({closeRegister}) => {
 
               <input type="submit" value="Submit" id="SubmitBtn" />
           </form>
+          
           {error && <p style={{ color: 'red' }}>{error}</p>}
-     
           </OutsideClickHandler>
           </div>
     );

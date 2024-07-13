@@ -20,6 +20,7 @@ padding: 6px 80px 0px 80px;
     background-color: rgb(46, 44, 44);
     border-radius: 5px;
     color: white;
+    cursor: pointer;
 }
 .navbtns{
     display: flex;

@@ -1,10 +1,15 @@
-.page7 img{
-    width: 100vw;
-    height: 120vh;
-    filter: blur(3px);
-}
-.page7{
-    position: relative;
+.page7 {
     width: 100vw;
     height: 130vh;
+    display: flex;
+    align-items: center;
+  }
+.background{
+    width: 100vw;
+    height: 130vh;
+    background-image: url(pexelsphoto1458916.jpeg); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    
 }

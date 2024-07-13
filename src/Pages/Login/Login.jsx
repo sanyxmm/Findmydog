@@ -1,10 +1,12 @@
-// src/pages/Login.jsx
-import React, { useState,useRef } from 'react';
-import './Login.css';
-import { auth } from '../../firebase'; 
+import React, { useState,useRef, useContext } from 'react';
 import OutsideClickHandler from 'react-outside-click-handler';
+import { AppContext } from '../../context';
+import { auth } from '../../firebase'; 
+import './Login.css';
 
-const Login = ({ onButtonClick, register,closeMenu }) => {
+const Login = ({ }) => {
+  const {openRegister,closeMenu } = useContext(AppContext);
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -36,12 +38,12 @@ const Login = ({ onButtonClick, register,closeMenu }) => {
       <div className='login'>
        
         <form onSubmit={handleSignIn}>
-        <div>
+         <div>
           <h1>Login</h1>
-          <a style={{ cursor: 'pointer' }} onClick={onButtonClick}>
+          <a style={{ cursor: 'pointer' }} onClick={openRegister}>
           New User? Sign up
           </a>
-        </div>
+         </div>
 
           <div>Email address: <br />
           <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />

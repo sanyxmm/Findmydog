@@ -1,6 +1,6 @@
 import React from 'react'
-import './Paage1.css'
-const Paage1 = () => {
+import './Footer.css'
+const Footer = () => {
   return (
     <div className='paage1' >
     <div className='box'>
@@ -18,4 +18,4 @@ const Paage1 = () => {
   )
 }
 
-export default Paage1
+export default Footer

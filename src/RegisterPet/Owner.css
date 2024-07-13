@@ -17,7 +17,7 @@ input{
     align-items: center;
 }
 .User-box{
-    color: black;
+    color: rgb(255, 253, 253);
     position: relative;
     height: 90vh;
     width: 38vw;

@@ -5,7 +5,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    z-index: 3;
+    background-image: url(pg1.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .Search input{
