@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 
 //Import routes for API from auth.js file
 const authRoutes = require('./routes/auth');
+const regRoutes = require('./routes/registerPet');
 
 const app = express();
 app.use(cors());
@@ -13,6 +14,7 @@ app.use(express.json());
 
 //Add the routes to the App using app.use function
 app.use('/api/auth', authRoutes);
+app.use('/api/registerPet', regRoutes);
 
 app.listen(5000, () => {
   console.log('Server is running on port 5000');

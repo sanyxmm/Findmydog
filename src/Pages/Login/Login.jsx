@@ -3,6 +3,7 @@ import OutsideClickHandler from 'react-outside-click-handler';
 import { AppContext } from '../../context';
 import { auth } from '../../firebase'; 
 import './Login.css';
+import { getUserDetails } from '../../api'; 
 
 const Login = ({ }) => {
   const {openRegister,closeMenu } = useContext(AppContext);
@@ -20,9 +21,21 @@ const Login = ({ }) => {
       
       // Obtain the Firebase user token
       const token = await user.getIdToken();
+      const userData = await getUserDetails(user.uid);
+      closeMenu();
       
-      console.log('User signed in:', user);
-      console.log('User token:', token);
+      // Save user details in session storage
+      sessionStorage.setItem('user', JSON.stringify({
+        token,
+        email: user.email,
+        contact: userData.contact,
+        username: userData.firstName + " " + userData.lastName,
+        uid: userData.uid
+      }));
+
+      //Add a text box near the signin button in navbar to display the username and hide the signin button until the user is logged in, 
+      //display a logout button near the username.
+
     } catch (error) {
       setError('Invalid credentials. Please try again.'); // Handle error
       console.error('Sign-in error:', error);

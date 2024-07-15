@@ -35,6 +35,23 @@ router.post('/signup', async (req, res) => {
   }
 });
 
+
+
+router.get('/getUserData/:ID', async (req, res) => {
+  const uid = req.params.ID;
+  try {
+    const userDoc = await db.collection('users').doc(uid).get();
+    if (userDoc.exists) {
+      res.json(userDoc.data());
+    } else {
+      res.status(404).json({ error: 'User details not found' });
+    }
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+
 //Exports the router which contains the Post APIs for Signup and Signin
 //This is then added to the App in 'Index.js'
 module.exports = router;
