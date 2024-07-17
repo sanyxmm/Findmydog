@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/Findmydog/static/css/main.e82cbc44.css",
-    "main.js": "/Findmydog/static/js/main.624b5df1.js",
-    "static/media/Step-3-scaled.png": "/Findmydog/static/media/Step-3-scaled.8cfa5b9ace38e7d04f4a.png",
-    "static/media/Step-4-scaled.png": "/Findmydog/static/media/Step-4-scaled.ddf8e9b3b56f557a5c70.png",
-    "static/media/Step-1-scaled.png": "/Findmydog/static/media/Step-1-scaled.32caca4713b96909447d.png",
-    "static/media/Step-2-scaled.png": "/Findmydog/static/media/Step-2-scaled.9e60166ba5bd8e9477dd.png",
-    "static/media/pg1.jpeg": "/Findmydog/static/media/pg1.0785cb3080bc799a9159.jpeg",
-    "static/media/sxxccc.jpg": "/Findmydog/static/media/sxxccc.b0bb2e052acaf2ebcb00.jpg",
-    "static/media/HankPortrait1.png": "/Findmydog/static/media/HankPortrait1.5114ed2f7caa59e09fb0.png",
-    "static/media/dg3.gif": "/Findmydog/static/media/dg3.f31e9d0499958833e3c1.gif",
-    "static/media/pexelsphoto1458916.jpeg": "/Findmydog/static/media/pexelsphoto1458916.1bba63bc18a6b692e6e7.jpeg",
-    "static/media/2.png": "/Findmydog/static/media/2.da6d6e7895983fa81efb.png",
-    "index.html": "/Findmydog/index.html",
-    "main.e82cbc44.css.map": "/Findmydog/static/css/main.e82cbc44.css.map",
-    "main.624b5df1.js.map": "/Findmydog/static/js/main.624b5df1.js.map"
+    "main.css": "/pawquest/static/css/main.fd9ebd36.css",
+    "main.js": "/pawquest/static/js/main.e788581a.js",
+    "static/media/Step-3-scaled.png": "/pawquest/static/media/Step-3-scaled.8cfa5b9ace38e7d04f4a.png",
+    "static/media/Step-4-scaled.png": "/pawquest/static/media/Step-4-scaled.ddf8e9b3b56f557a5c70.png",
+    "static/media/Step-1-scaled.png": "/pawquest/static/media/Step-1-scaled.32caca4713b96909447d.png",
+    "static/media/Step-2-scaled.png": "/pawquest/static/media/Step-2-scaled.9e60166ba5bd8e9477dd.png",
+    "static/media/pg1.jpeg": "/pawquest/static/media/pg1.0785cb3080bc799a9159.jpeg",
+    "static/media/abt-section.png": "/pawquest/static/media/abt-section.dd7dfa78a0344c879f07.png",
+    "static/media/pexelsphoto3452072.jpeg": "/pawquest/static/media/pexelsphoto3452072.49ec5596fde54dc6886d.jpeg",
+    "static/media/sxxccc.jpg": "/pawquest/static/media/sxxccc.b0bb2e052acaf2ebcb00.jpg",
+    "static/media/b.jpg": "/pawquest/static/media/b.fcfef7eca2d7140d015d.jpg",
+    "static/media/animation-gif.gif": "/pawquest/static/media/animation-gif.f31e9d0499958833e3c1.gif",
+    "static/media/amnpreet.jpg": "/pawquest/static/media/amnpreet.47021edc7b38c4964be0.jpg",
+    "index.html": "/pawquest/index.html",
+    "main.fd9ebd36.css.map": "/pawquest/static/css/main.fd9ebd36.css.map",
+    "main.e788581a.js.map": "/pawquest/static/js/main.e788581a.js.map"
   },
   "entrypoints": [
-    "static/css/main.e82cbc44.css",
-    "static/js/main.624b5df1.js"
+    "static/css/main.fd9ebd36.css",
+    "static/js/main.e788581a.js"
   ]
 }
