@@ -1,28 +1,32 @@
 import React ,{ useState , useContext}  from 'react'
 import { AppContext } from '../../context'
-import Owner from '../../RegisterPet/Owner'
+import Owner from '../../Pages/RegisterPet/Owner'
 import { Link } from 'react-scroll';
-import paw from './2.png'
+import logo from './logo.png'
+import menuButton from './menu-button.png'
 import './Navbar.css'
 
 const Navbar = () => {
-  const {register,Menu,openMenu,openOwner,isFormOpen} = useContext(AppContext);   
+  const {register,Menu,openMenu,openOwner,isFormOpen,openNav,navbtns} = useContext(AppContext);   
   return (
-    <div className={`navbar ${Menu || register ? 'blur-background' : ''}`}>
-      <img src={paw} width="180px" alt="" />
+    <nav className={`navbar ${Menu || register ? 'blur-background' : ''}`}>
+      <img id='logo' src={logo} alt="" />
 
-      <div className='navbtns'>
-        <Link  activeClass="active" smooth spy to ="Home">Home</Link>
-        <Link  activeClass="active" smooth spy to="Search">Search</Link>
-        <Link  activeClass="active" smooth spy to="RegisterPet">RegisterPet</Link>
-        <Link  activeClass="active" smooth spy to="Help">Help</Link>
-        <Link  activeClass="active" smooth spy to="Aboutus">About us</Link>
-      </div>
+      <ul className={navbtns ? "open" : "navbtns"}>
+          <li> <Link id='text' activeClass="active" smooth spy to ="Home">Home</Link></li>
+          <li> <Link  id='text' activeClass="active" smooth spy to="Search">Search</Link></li>
+          <li> <Link  id='text' activeClass="active" smooth spy to="RegisterPet">RegisterPet</Link></li>
+          <li> <Link  id='text' activeClass="active" smooth spy to="Help">Help</Link></li>
+          <li> <Link  id='text' activeClass="active" smooth spy to="Aboutus">About us</Link></li>
+      </ul>
 
-
+        <div></div>
       <div><button onClick={openMenu} >Sign in</button></div>
+   
+      <img id='menu-button' onClick={openNav} src={menuButton} alt="" />
       {isFormOpen && <Owner/>}
-    </div>
+    </nav>
+    
   )
 }
 export default Navbar

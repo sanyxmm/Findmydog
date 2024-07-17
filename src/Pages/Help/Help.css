@@ -1,0 +1,73 @@
+/* .main-page6{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(5b8ecf43cd6a97269d25bcca57b4c63d.jpg);
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+} */
+.page6 img{
+    width: 50vw;
+    height: 100vh;
+}
+.page6 {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    background-color: #f3f3f3;
+
+}
+#contact{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+font-size: 3vw;
+}
+#contact div{
+    margin-left: 10vw;
+}
+.main-Contact-owner{
+    display: none;
+}
+@media (max-width: 880px){
+    .page6{
+        display: none;
+    }
+    .main-Contact-owner{
+        height: 70vh;
+        width: 100vw;
+        display: block;
+        background-color: #fafbff;;
+    background-image: url(pg1.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    }
+    .forblur{
+        /* backdrop-filter: blur(2px); */
+        height: 100vh;
+    }
+    .Contact-owner{
+        height: 40vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 14vw 13vw 0vw 13vw;
+        font-size: 4vw;
+    }
+    
+    .Contact-owner h1{
+        text-align: center;
+        font-size: 9vw;
+    }
+    .Contact-owner button{
+        padding: 2vw 3.7vw 2vw 3.7vw;
+        border-radius: 5vw;
+        border: none;
+        background-color: black;
+        color: aliceblue;
+    }
+}

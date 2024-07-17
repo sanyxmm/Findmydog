@@ -1,21 +1,19 @@
-import React, { useState , useContext, useEffect} from 'react'
-import Login from '../Login/Login'
-import { AppContext } from '../../context';
-import Reg from '../Reg/Reg'
+import React from 'react'
 import './Home.css'
-function Home() {
-  const {Menu,register} = useContext(AppContext);
-
+const Home = () => {
   return (
-    <div className='HomePage'>
-       <div className={`Search ${Menu||register ? 'blur-background' : ''}`} >
-           <label ><input type="text" placeholder='Search Pet-id ' /> </label>
-           <button><i className="fa-solid fa-magnifying-glass"></i></button>
-       </div>
-      {Menu && (<Login/>)}
-      {register && <Reg />}
+  
+    <div className='home'>
+
+      <div style={{width:'100vw',color:'white',textAlign:'center'}}>
+        <div style={{fontSize :'5vw'}}>Trusted  by thosands of </div>
+        <div style={{fontSize:'10vw'}}>Dogs and Their Owners</div>
+        <span style={{fontSize:'3vw'}}>I truly believe every single one of us raising dogs today share an incredible responsibility in deteremining how are dogs will view their world</span>
+        <button style={{padding:"1vw 4vw 1vw 4vw",marginTop:'5vw',fontSize:'4.5vw',borderRadius:'5vw',border:'none'}}>Details</button>
+      </div>
+
     </div>
-  );
+  )
 }
 
 export default Home

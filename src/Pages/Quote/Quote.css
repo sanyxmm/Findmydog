@@ -1,0 +1,11 @@
+.Quote{
+    width: 100vw;
+    height: auto;
+    font-size: 1.6vw;
+    padding: 10vw;
+    background-image: url(pexelsphoto3452072.jpeg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+}

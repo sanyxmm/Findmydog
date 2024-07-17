@@ -1,36 +1,71 @@
-.paage1{
+.main-footer{
+    height: 30vh;
     width: 100vw;
-    height: 70vh;
-    margin-top:30vh;
-    background-color:#8c654a;
-    color: white;
     display: flex;
-    justify-content: center;
     align-items: center;
+    background-color: rgba(138, 95, 59, 0.863);
+    color: white;
+    padding: 15vw 0vw 15vw 0vw;
+
 }
-.box{
-    font-size: 1.7vw;
+.footer-sec{
     text-align: center;
-    height: 50vh;
+    height: 16vh;
+    padding: 0vw 29vw 0vw 29vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+    justify-content: space-around;
 }
-.paage1 span{
-    font-size: 1.2vw;
-    margin: 0.4vw;
-    opacity: 80%;
-    margin: 1.5vw;
+.footer-sec h5{
+    text-align: center;
 }
-.paage1 input{
-    font-size: 16px;
-    margin-left: 5px;
-    padding: 10px;
+.footer-sec span{
+    font-size: 2vw;
+    opacity: 70%;
 }
-.paage1 button{
-    padding: 9px;
-    font-size: 17px;
-    width:36vw;
+.footer-sec button{
+    padding: 0.7vw;
+    font-size: 1.5vw;
+    margin-top: -0.5vw;
+    border: none;
+}
+
+.footer-sec input{
+   font-size: 1.5vw;
+   padding: 0.8vw;
+   margin-left: 0.5vw;
+   border: none;
+}
+@media (min-width:680px) {
+    .main-footer{
+        height: 50vh;
+    }
+    .footer-sec{
+        text-align: center;
+        height: 20vw;
+        padding: 0vw 29vw 0vw 29vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .footer-sec h5{
+        font-size: 3vw;
+    }
+    .footer-sec span{
+        font-size: 1.2vw;
+        opacity: 70%;
+    }
+    .footer-sec button{
+        padding: 0.5vw;
+        font-size: 1.5vw;
+        margin-top: 0.5vw;
+        border: none;
+    }
+    
+    .footer-sec input{
+       font-size: 1.5vw;
+       padding: 0.5vw;
+       margin-left: 0.5vw;
+       border: none;
+    }
 }
