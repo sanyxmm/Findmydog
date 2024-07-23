@@ -55,7 +55,7 @@ const Reg = () => {
           }}> 
             
           <form className="box2" onSubmit={handleSubmit}>
-              <h1 style={{ fontSize: '30px', textAlign: 'center' }}>Sign-Up</h1>
+              <h1>Sign-Up</h1>
 
               {/* <div className="image">
                   <img src="profile.jpg" alt="" id="profile-pic" />
@@ -138,11 +138,14 @@ const Reg = () => {
               </div>
 
               <label htmlFor="checkbox" id="check">
-                  <input id="checkbox" type="checkbox" required style={{ width: '15px', height: '15px' }} />
+                  <input id="checkbox" type="checkbox" required />
                   I agree to all terms & conditions
               </label>
 
               <input type="submit" value="Submit" id="SubmitBtn" />
+              <div id='closemenu2' onClick={closeRegister}>
+          <i class="fa-solid fa-circle-xmark"></i>
+          </div>
           </form>
           
           {error && <p style={{ color: 'red' }}>{error}</p>}

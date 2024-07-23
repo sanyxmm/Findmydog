@@ -1,67 +1,55 @@
-.pagemain{
-    padding: 5vw 0vw 10vw 0vw;
+.pagemain {
+    background-color: #fafbff;
     display: inline-block;
-    }
-.page4{
-    /* height: 100vh; */
-    width:100vw;
+    padding: 5vw 0 10vw;
+  }
+  #heading {
+    font-size: 5vw;
+    padding: 5vw 0 2vw;
+    text-align: center;
+  }
+  .page4 {
+    align-items: center;
     display: flex;
     justify-content: space-evenly;
-    color: aliceblue;
-}
-.page4 div{
-    height:32vw;
-    width:22vw;
+    width: 100vw;
+  }
+  .page4 div {
+    background-color: #000;
+    border-radius: 10vw;
+    color: #f0f8ff;
     display: flex;
     flex-direction: column;
-    font-size: 1.5vw;
-    background-color: black;
-    padding:  0.1vw 1.5vw 1.5vw 1.5vw;
-}
-.page4 div div{
+    font-size: 1.3vw;
+    height: 32vw;
+    padding: 1.5vw 2.3vw;
+    width: 22vw;
+  }
+  .page4 div div {
     display: inline-block;
-
-}
-.page4 div h3{
+  }
+  .page4 div h3 {
     text-align: center;
-}
-.page4 div img{
-    max-width: 450px;
+  }
+  .page4 div img {
     max-height: 450px;
-    object-fit: cover;
-}
-#heading{
-    text-align:center;
-    font-size:5vw;
-    padding: 5vw 0vw 2vw 0vw;
-}
-
-@media (max-width:680px) {
-    .pagemain{
-    padding: 5vw 0vw 10vw 0vw;
-    display: inline-block;
-    background-color: #fafbff;
+    max-width: 450px;
+  }
+  @media (max-width: 680px) {
+    .page4 {
+      flex-direction: column;
+      height: 100vh;
+      overflow-y: scroll;
     }
-    .page4{
-        height:100vh;
-        width:100vw;
-        flex-direction: column;
-        align-items: center;
-        color: aliceblue;
-        overflow-y: scroll;
+    .page4 div {
+      border-radius: 25vw;
+      font-size: 3.3vw;
+      height: 200vw;
+      margin: 1vw;
+      padding: 3vw 8vw 8vw;
+      width: 56vw;
     }
-    .page4 div{
-        height:200vw;
-        width:60vw;
-        display: flex;
-        flex-direction: column;
-        font-size: 3.5vw;
-        background-color: black;
-        border-radius: 15vw;
-        padding:  1vw 3vw 8vw 3vw;
-        margin: 1vw;
+    #heading {
+      font-size: 7vw;
     }
-    #heading{
-        font-size: 7vw;
-    }
-}
+  }

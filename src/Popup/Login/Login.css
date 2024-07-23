@@ -1,29 +1,69 @@
-.loginBox{
-    height: 85vh;
-    width: 33vw;
-    backdrop-filter: blur(5px);
-    background-color: transparent;
-     position: absolute;
-    top: 15%;
-    right: 0%;
-}
-.login form{
-    height: 60vh;
-    width: 25vw;
-    padding: 20px;
+.login {
+    align-items: center;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    background-color: initial;
+    display: flex;
+    font-size: 1vw;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+  }
+  .login-box {
+    background-color: #fff;
+    position: relative;
+  }
+  .login-box h1 {
+    font-size: 2em;
+  }
+  .login-box div {
+    font-size: 1.5em;
+  }
+  .login-box {
+    border-radius: 2em;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-   
-}
-.login form input{
+    gap: 1em;
+    padding: 2em;
+  }
+  .login-box input {
+    font-size: 0.7em;
+    padding: 0.5em;
     position: relative;
-    font-size: 15px;
-    padding: 5px;
-    width: 240px;
-}
-.login form button{
-    margin-top: 10px;
-    padding: 10px;
-    font-size: 15px;
-}
+    width: 24em;
+  }
+  .login-box button {
+    background-color: #000;
+    border: none;
+    border-radius: 2rem;
+    color: #fff;
+    font-size: 1.8em;
+    margin-top: 0.5em;
+    padding: 0.7em;
+  }
+  .login-box button:hover {
+    background-color: #59b762;
+    border: none;
+    color: #fff;
+  }
+  .login-box div a:hover {
+    color: red;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  #closemenu {
+    position: absolute;
+    right: 4%;
+    top: 4%;
+    font-size: 2em;
+  }
+  @media (max-width: 680px) {
+    .login-box {
+      background-color: #fff;
+      font-size: 2.5vw;
+      position: relative;
+    }
+  }

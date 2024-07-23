@@ -1,74 +1,49 @@
-input{
-    padding: 5px;
-    padding-right: 40px;
-    font-size:10px;
-}
-
-.User{
+.User {
+    align-items: center;
+    -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
-    background-color: transparent;
+    background-color: initial;
+    display: flex;
+    font-size: 1vw;
     height: 100vh;
-    width: 100vw;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    display: flex;
     justify-content: center;
-    align-items: center;
-}
-.User-box{
-    color: rgb(255, 253, 253);
-    position: relative;
-    height: 90vh;
-    width: 38vw;
-    padding: 15px 20px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    z-index: 999;
+  }
+  #closemenu2 {
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    font-size: 1.5em;
+  }
+  .User-box {
+    background-color: #fff;
     display: flex;
     flex-direction: column;
+    gap: 1em;
     justify-content: space-between;
-}
-
-.User-image{
-    position: absolute;
-    right: 10%;
-    top: 14%;
-    width: 150px;
-    height: 150px;
-    font-size: 17px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-.User-image img{
-    width: 7vw;
-    height: 8vw;
-    border-radius: 48%;
-    object-fit: cover;
-    background: #dfdfdf;
-}
-#to-upload{
-    display: none;
-}
-
-#profile{
-    width: 7vw;
-    padding: 2px 3px;
-    font-size: 13px;
-    border: 1px solid rgb(70, 18, 118);
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 1em;
+    position: relative;
+  }
+  .User-box label {
+    font-size: 1em;
+  }
+  .User-box h1 {
+    font-size: 2em;
     text-align: center;
-}
-/* #details input{
-    padding-left: 30px;
-} */
-#details i{
-    position: absolute;
-    margin: 7px 5px;
-}
-
-#SubmitBtn{
-   padding-left: 40px;
-   font-size: 14px;
-   text-align: center;
-}
+  }
+  .User-box input {
+    font-size: 0.8em;
+    padding: 0.3em;
+  }
+  #checkbox {
+    width: 1em;
+  }
+  @media (max-width: 680px) {
+    .User {
+      font-size: 3vw;
+    }
+  }

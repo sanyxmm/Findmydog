@@ -1,4 +1,36 @@
-.page5{
+/* .page5{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(HankPortrait1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #f3f3f3e6;
+    display: flex;
+    font-size: 2.5vw;
+    flex-direction:row;
+   padding-left: 50vw;
+    align-items: center;
+    background-color: #f3f3f3;
+}
+.search{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 3vw;
+}
+
+#here{
+    margin-top:2vw;
+    font-size: 15px;
+    padding: 12px;
+    width: 33vw;
+    height: 3vw;
+    border-radius:7px;
+    z-index: 1;
+} */
+
+/* .page5{
     height: 100vh;
     width: 100vw;
     background-image: url(abt-section.png);
@@ -8,10 +40,8 @@
     display: flex;
     font-size: 3vw;
     flex-direction:row;
-    /* justify-content: center; */
    padding-left: 50vw;
     align-items: center;
-    /* background-color: #f3f3f3; */
 }
 .search{
     display: flex;
@@ -32,23 +62,13 @@
 }
 .findme{
     display: none;
+} */
+#dogboy{
+    width: 80vw;
 }
 
-@media (max-width:680px){
-    .page5{
-        display: none;
-    }
-    .bg{
-    /* height: 100vh;
-    width: 100vw; */
-    /* background-image: url(abt-section.png);
-    background-size: contain;
-    background-position: bottom;
-    background-repeat: no-repeat; */
-    background-color:#fffaf3;
-    
-}
 .findme{
+    background-color:#fffaf3;
     position: relative;
     width: 100vw;
     display: flex;
@@ -92,5 +112,43 @@
 }
 #findme-heading{
     font-size: 6vw;
+}
+@media (min-width:680px){
+.findme{
+    width: 100vw;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0vw;
+   overflow: hidden;
+}
+#dogboy{
+    width: 50vw;
+}
+.findme div div{
+    font-size: 1.5vw;
+}
+#content-find{
+    margin-left: 5vw;
+}
+.find-search input{
+    margin-top: 4vw;
+    font-size: 1.2vw;
+    padding:0.8vw;
+    border-radius: 5vw;
+    width: 30vw;
+}
+.find-search button {
+    height: 3.3vw;
+    width: 3.3vw;
+    border-radius: 1.5vw;
+    border: none;
+}
+.find-search button i {
+    font-size: 1.5vw;
+}
+#findme-heading{
+    font-size: 3vw;
 }
 }

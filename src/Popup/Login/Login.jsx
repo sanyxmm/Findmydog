@@ -47,13 +47,13 @@ const Login = ({ }) => {
       // Close the menu
       closeMenu();
     }}>
-      <div className='loginBox'>
+      <div >
       <div className='login'>
        
-        <form onSubmit={handleSignIn}>
+        <form className='login-box' onSubmit={handleSignIn}>
          <div>
           <h1>Login</h1>
-          <a style={{ cursor: 'pointer' }} onClick={openRegister}>
+          <a onClick={openRegister}>
           New User? Sign up
           </a>
          </div>
@@ -66,7 +66,10 @@ const Login = ({ }) => {
           </div>  
 
           {error && <p style={{ color: 'red' }}>{error}</p>}
-          <button type="submit" style={{ padding: '10px' }}>Sign in</button>
+          <button type="submit">Sign in</button>
+          <div id='closemenu' onClick={closeMenu}>
+          <i class="fa-solid fa-circle-xmark"></i>
+          </div>
         </form>      
       </div>
       

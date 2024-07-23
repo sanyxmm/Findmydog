@@ -36,14 +36,10 @@ const AppProvider = ({ children }) => {
         isFormOpen,
         animation,
         openOwner,closeOwner,
-        openMenu,
-        closeMenu,
-        openNav,
-        closeNav,
-        openRegister,
-        closeRegister,
-        openRegister2,
-        closeRegister2,
+        openMenu,closeMenu,
+        openNav,closeNav,
+        openRegister,closeRegister,
+        openRegister2,closeRegister2,
         setAnimationState,
       }}
     >
