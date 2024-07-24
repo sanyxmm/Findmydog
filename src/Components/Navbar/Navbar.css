@@ -60,6 +60,15 @@
         font-weight: 550;
         border-radius: 2vw;
     }
+    .logPop{
+        position: absolute;
+        top: 70%;
+        left: 41%;
+        padding: 1em 3em;
+        background-color:  #57b257;
+        color: white;
+        border-radius: 4em;
+    }
  
     @media (max-width: 680px) {
         #logo{

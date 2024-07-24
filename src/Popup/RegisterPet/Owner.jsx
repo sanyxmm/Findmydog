@@ -3,9 +3,11 @@ import OutsideClickHandler from 'react-outside-click-handler';
 import { AppContext } from '../../context';
 import { signup } from '../../api'; //Imports the Signup function from 'api.js' file
 import './Owner.css'
+import profile from './profile.jpg'
 import { registerPet } from '../../api';
 const QRCode = require('qrcode');
 const Owner = () => {
+    const [imageUrl, setImageUrl] = useState(profile);
     const { closeOwner } = useContext(AppContext);
     const [petData, setPetData] = useState({
         firstName: '',
@@ -93,6 +95,14 @@ const Owner = () => {
     //     await transporter.sendMail(mailOptions);
     // };
 
+    const handleImageChange = (e) => {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+        reader.onload = () => {
+          setImageUrl(reader.result);
+        };
+        reader.readAsDataURL(file);
+      };
     return (
         <div className='User'>
             <OutsideClickHandler
@@ -101,11 +111,11 @@ const Owner = () => {
                 <form className="User-box" onSubmit={handleSubmit}>
                     <h1>Owner Details</h1>
 
-                    {/* <div className="User-image">
-                        <img src="profile.jpg" alt="" id="profile-pic" />
-                        <input type="file" accept="image/jpg ,image/jpeg" id="to-upload" />
-                        <label htmlFor="to-upload" id="profile">Upload Image</label>
-                    </div> */}
+                    <div className="box-image">
+              {imageUrl && <img src={imageUrl} alt="" id="profile-pic" />}
+                  <input type="file" accept="image/jpg ,image/jpeg" id="to-upload" onChange={handleImageChange}/>
+                  <label htmlFor="to-upload" id="profile">Upload Image</label>
+              </div>
 
                     <label>
                         First Name: <br />

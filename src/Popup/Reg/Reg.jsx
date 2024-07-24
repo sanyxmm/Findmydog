@@ -1,10 +1,11 @@
 import React, { useContext, useState } from 'react';
 import './Reg.css';
+import profile from './profile.jpg'
 import { signup } from '../../api';  //Imports the Signup function from 'api.js' file
 import OutsideClickHandler from 'react-outside-click-handler';
 import { AppContext } from '../../context';
 const Reg = () => {
-    const{closeRegister,closeRegister2} = useContext(AppContext);
+    const{closeRegister,closeRegister2,openregPop} = useContext(AppContext);
 
     const [formData, setFormData] = useState({
         firstName: '',
@@ -38,6 +39,8 @@ const Reg = () => {
             //Sends the form data to the 'signup' function which calls the SignUp API.
             const response = await signup(formData);
             console.log(response);
+            closeRegister();
+            openregPop();
             //HIDE THE ICON OR DISPLAY A MESSAGE FOR SUCCESS   
             
         } catch (error) {
@@ -45,7 +48,16 @@ const Reg = () => {
             setError('Signup failed. Please try again.');
         }
     };
-
+    const [imageUrl, setImageUrl] = useState(profile);
+  
+    const handleImageChange = (e) => {
+      const file = e.target.files[0];
+      const reader = new FileReader();
+      reader.onload = () => {
+        setImageUrl(reader.result);
+      };
+      reader.readAsDataURL(file);
+    };
     return (
         <div className='regg'>
         <OutsideClickHandler onOutsideClick={() => {
@@ -57,11 +69,11 @@ const Reg = () => {
           <form className="box2" onSubmit={handleSubmit}>
               <h1>Sign-Up</h1>
 
-              {/* <div className="image">
-                  <img src="profile.jpg" alt="" id="profile-pic" />
-                  <input type="file" accept="image/jpg ,image/jpeg" id="to-upload" />
+              <div className="box-image">
+              {imageUrl && <img src={imageUrl} alt="" id="profile-pic" />}
+                  <input type="file" accept="image/jpg ,image/jpeg" id="to-upload" onChange={handleImageChange}/>
                   <label htmlFor="to-upload" id="profile">Upload Image</label>
-              </div> */}
+              </div>
 
               <label>
                   First Name: <br />
@@ -142,7 +154,7 @@ const Reg = () => {
                   I agree to all terms & conditions
               </label>
 
-              <input type="submit" value="Submit" id="SubmitBtn" />
+              <input type="submit" value="Sign Up" id="SubmitBtn" />
               <div id='closemenu2' onClick={closeRegister}>
           <i class="fa-solid fa-circle-xmark"></i>
           </div>

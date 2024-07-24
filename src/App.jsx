@@ -44,13 +44,3 @@ function App() {
 }
 
 export default App;
-
-
-  {/* <Navbar/> */}
-            {/* <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/Page3" element={<Page3 />} />
-                  <Route path="/Page6" element={<Page6 />} />
-                  <Route path="/Page4" element={<Page4 />} />
-                  <Route path="/Page7" element={<Page7 />} />
-            </Routes> */}

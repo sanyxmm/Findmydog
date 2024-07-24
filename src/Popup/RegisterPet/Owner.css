@@ -12,6 +12,7 @@
     top: 0;
     width: 100vw;
     z-index: 999;
+    
   }
   #closemenu2 {
     position: absolute;
@@ -27,6 +28,7 @@
     justify-content: space-between;
     padding: 1em;
     position: relative;
+    border-radius: 1em;
   }
   .User-box label {
     font-size: 1em;

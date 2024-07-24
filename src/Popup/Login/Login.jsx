@@ -6,7 +6,7 @@ import './Login.css';
 import { getUserDetails } from '../../api'; 
 
 const Login = ({ }) => {
-  const {openRegister,closeMenu } = useContext(AppContext);
+  const {openRegister,closeMenu,openlogPop,openlogchk } = useContext(AppContext);
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -22,7 +22,10 @@ const Login = ({ }) => {
       // Obtain the Firebase user token
       const token = await user.getIdToken();
       const userData = await getUserDetails(user.uid);
+      console.log(userData);
       closeMenu();
+      openlogPop();
+      openlogchk();
       
       // Save user details in session storage
       sessionStorage.setItem('user', JSON.stringify({
