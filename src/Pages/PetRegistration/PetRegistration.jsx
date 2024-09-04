@@ -6,6 +6,7 @@ import dog from './dogyy.png'
 const PetRegistration = () => {
   const {openOwner} = useContext(AppContext);
   return (
+<div>
 <div className="container">
     <div className='sticker'></div>
   <img id="dog-image" src={dog} alt="" />
@@ -14,6 +15,7 @@ const PetRegistration = () => {
      <h6>In Seconds...</h6>
     <button ><Link  id='text' onClick={openOwner}  activeClass="active" smooth spy to="Home">Register Now</Link></button>
     </div>
+</div>
 </div>
   )
 }

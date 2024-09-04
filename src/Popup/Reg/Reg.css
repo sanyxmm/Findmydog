@@ -21,7 +21,7 @@
     flex-direction: column;
     gap: 1em;
     justify-content: space-around;
-    padding: 1em;
+    padding: 2em;
     position: relative;
     border-radius: 1em;
   }
@@ -56,10 +56,10 @@
   }
   #SubmitBtn {
     background-color: #000;
-    border-radius: 1em;
+    border-radius: 1.4em;
     color: #fff;
-    font-size: 1em;
-    padding: 0.4em;
+    font-size: 1.3em;
+    padding: 0.6em;
   }
   #SubmitBtn:hover {
     background-color: #59b762;
