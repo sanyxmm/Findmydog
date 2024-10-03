@@ -12,7 +12,7 @@ const Working = () => {
       <div>
         <img src={s1} alt="" />
         <h3>Step I : Register Tag</h3>
-        <p>Use your phone to scan the QR code on your pet’s tag. 
+        <p>Use your phone to scan the QR code on your pet's tag. 
         Enter your name and the phone number you would like to appear when the tag is scanned.</p>
       </div>
       <div>

@@ -18,7 +18,7 @@ function App() {
     setanima(true)
     setTimeout(() => {
       setanima(false);
-    }, 1000);
+    }, 3000);
   }, []);
 
   return (
@@ -35,7 +35,6 @@ function App() {
                <div id="Working"><Working/></div>
                <div id="Help"><Help/></div>
                <div id="Aboutus"><Footer/></div>
-
             </div>}
         </div>
       </div>

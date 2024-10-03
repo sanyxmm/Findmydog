@@ -2,6 +2,7 @@
     /* background-color:#007ab0; */
     background-color: white;
     color: rgb(21, 22, 22);
+    overflow-x:hidden ;
 }
 #snuf{
     display:flex;
